@@ -25,6 +25,10 @@ public class Time {
 	private long qtdSocios;
 	
 	private double receita;
+	
+	public Time() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public int getCodigo() {
 		return codigo;
