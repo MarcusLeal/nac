@@ -27,7 +27,7 @@ public class Time {
 	private double receita;
 	
 	public Time() {
-		// desenv1 Auto-generated constructor stub
+		// desenv12 Auto-generated constructor stub
 	}
 
 	public int getCodigo() {
