@@ -27,7 +27,7 @@ public class Time {
 	private double receita;
 	
 	public Time() {
-		// TODO Auto-generated constructor stub
+		// Nada Auto-generated constructor stub
 	}
 
 	public int getCodigo() {
