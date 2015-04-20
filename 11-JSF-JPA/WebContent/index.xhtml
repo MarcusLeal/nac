@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Login</title>
+	<h:outputStylesheet library="css" name="bootstrap.css"/>
+</h:head>
+<h:body>
+	<h1>Entre!</h1>
+	<h:form>
+		<h:messages/>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Login" for="login"/>
+			<h:inputText value="#{loginBean.usuario}"
+				id="login" styleClass="form-control"/>
+			<h:outputLabel value="Senha" for="senha"/>
+			<h:inputSecret value="#{loginBean.senha}"
+				id="senha" styleClass="form-control"/>
+			<h:commandButton value="Entrar" 
+				styleClass="btn btn-default" 
+				action="#{loginBean.logar}"/>		
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>
+
+
+
+
+
+

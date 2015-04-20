@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="WEB-INF/_template.xhtml">
+	<ui:define name="title">Cadastro Time</ui:define>
+	<ui:define name="content">
+		<h1>Cadastro de Time</h1>
+		<h:messages />
+		<h:form>
+			<div class="form-group">
+				<h:outputLabel value="Nome" for="nome" />
+				<h:inputText id="nome" styleClass="form-control"
+					value="#{timeBean.time.nome}" />
+			</div>
+			<div class="form-group">
+				<h:outputLabel value="Número de Sócios" for="nr" />
+				<h:inputText id="nr" styleClass="form-control"
+					value="#{timeBean.time.qtdSocios}" />
+			</div>
+			<div class="form-group">
+				<h:outputLabel value="Receita" for="rec" />
+				<h:inputText id="rec" styleClass="form-control"
+					value="#{timeBean.time.receita}" />
+			</div>
+			<div class="form-group">
+				<h:outputLabel value="Data Fundação" for="dt" />
+				<h:inputText id="dt" styleClass="form-control"
+					value="#{timeBean.time.dataFundacao.time}">
+					<f:convertDateTime pattern="dd/MM/yyyy" timeZone="GMT-3"
+						locale="pt_BR" />
+				</h:inputText>
+			</div>
+			<div class="form-group">
+				<h:commandButton value="Cadastrar" styleClass="btn btn-success"
+					actionListener="#{timeBean.cadastrar}" />
+			</div>
+
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>
+
+
+

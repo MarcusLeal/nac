@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="WEB-INF/_template.xhtml">
+	<ui:define name="content">
+		<h1>Times Cadastrados</h1>
+		<h:form>
+			<h:panelGrid columns="3">
+				<h:outputLabel value="Nome" for="nome" />
+				<h:inputText value="#{listaTimeBean.nome}" id="nome"
+					styleClass="form-control" />
+				<h:commandButton value="Buscar" styleClass="btn btn-primary"
+					actionListener="#{listaTimeBean.buscar}" />
+			</h:panelGrid>
+		</h:form>
+		<h:dataTable styleClass="table" value="#{listaTimeBean.times}" var="t">
+			<h:column>
+				<f:facet name="header">Nome</f:facet>
+			#{t.nome}
+		</h:column>
+			<h:column>
+				<f:facet name="header">Sócios</f:facet>
+			#{t.qtdSocios}
+		</h:column>
+			<h:column>
+				<f:facet name="header">Receita</f:facet>
+			#{t.receita}
+		</h:column>
+			<h:column>
+				<f:facet name="header">Data Fundação</f:facet>
+				<h:outputText value="#{t.dataFundacao.time}">
+					<f:convertDateTime pattern="dd/MM/yyyy" />
+				</h:outputText>
+			</h:column>
+		</h:dataTable>
+	</ui:define>
+</ui:composition>
+</html>
+
+
+
+
+
+
