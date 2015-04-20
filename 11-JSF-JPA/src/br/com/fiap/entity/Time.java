@@ -26,6 +26,8 @@ public class Time {
 	
 	private double receita;
 	
+	private String teste;
+	
 	public Time() {
 		// desenv13 Auto-generated constructor stub
 	}
